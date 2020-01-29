@@ -387,7 +387,7 @@ class Tabs extends Plugin {
 
     this.$tabContent
       .find(`.${this.options.panelClass}`)
-      .css('height', '')
+      .css('min-height', '')
       .each(function() {
 
         var panel = $(this),
@@ -408,7 +408,7 @@ class Tabs extends Plugin {
 
         max = temp > max ? temp : max;
       })
-      .css('height', `${max}px`);
+      .css('min-height', `${max}px`);
   }
 
   /**
